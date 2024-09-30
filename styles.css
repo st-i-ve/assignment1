@@ -300,6 +300,9 @@ h1 {
     z-index: 2;
   }
 
+  body{
+    
+  }
   .nav {
     flex-direction: column;
     gap: 2rem;
@@ -314,9 +317,11 @@ h1 {
   .hamburger-menu {
     display: block;
     z-index: 1000;
+    
   }
 
   .nav {
+    display: none;
     position: absolute;
     top: 0;
     right: -100%;
@@ -327,18 +332,21 @@ h1 {
     text-align: center;
     background-color: #000; /* Set navigation background to black */
     color: #fff; /* Set text color to white */
-    transition: 0.15s ease-in-out;
+    transition: 0.25s ease-in-out;
     z-index: 1;
+    
   }
 
   .nav.active {
+    display: flex;
     right: 0;
+    height: 100%;
   }
 
   #form {
     padding: 15px;
     z-index: 1;
-    width: 25rem;
+    width: 100%;
   }
 
   h1 {
@@ -368,7 +376,7 @@ h1 {
 
   #contact {
     padding: 15px;
-    width: 28rem;
+    width: 100%;
   }
 
   h1 {
@@ -552,4 +560,51 @@ p {
     font-size: 1em;
     color: #555;
   }
+}
+
+@media (max-width: 400px ){
+    .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #020202; /* Set navigation bar background to black */
+  color: #fff; /* Set text color to white */
+  padding: 1%;
+}
+
+.logo-image {
+  height: 2.5rem; /* Adjust height as needed */
+  margin: 10px;
+  border-radius: 50%; /* Space between image and text */
+  z-index: 10;
+}
+
+.logo-image .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-worp {
+  font-family: myfont; /* Custom font for "worp" */
+  font-size: 1.5rem;
+  margin-right: 5px;
+  font-weight: normal; /* Space between "worp" and "studios" */
+}
+
+.logo-studios {
+  margin-top: 10px;
+  font-family: myfont2; /* Custom font for "studios" */
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.nav-container .logo {
+  font-family: myfont;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+
 }
