@@ -1,0 +1,555 @@
+/* styles.css */
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  color: #333;
+  padding: 0px;
+  background-size: cover; /* Adjusts the image size to cover the entire background */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+ul li {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: myfont;
+  src: url(Stereofunk.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: myfont2;
+  src: url(Mister.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.indexpage {
+  background-image: url(aesthetic4.png);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #020202; /* Set navigation bar background to black */
+  color: #fff; /* Set text color to white */
+  padding: 1%;
+}
+
+.logo-image {
+  height: 5rem; /* Adjust height as needed */
+  margin: 2px;
+  border-radius: 50%; /* Space between image and text */
+  z-index: 10;
+}
+
+.logo-image .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-worp {
+  font-family: myfont; /* Custom font for "worp" */
+  font-size: 2rem;
+  margin-right: 5px;
+  font-weight: normal; /* Space between "worp" and "studios" */
+}
+
+.logo-studios {
+  margin-top: 10px;
+  font-family: myfont2; /* Custom font for "studios" */
+  font-size: 3.5rem;
+  font-weight: normal;
+}
+
+.nav-container .logo {
+  font-family: myfont;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  flex-grow: 1;
+}
+
+.nav--ul__one {
+  margin: 0 auto;
+}
+
+.nav-container,
+.nav--ul__one {
+  display: flex;
+  gap: 1.6rem;
+  font-size: 1.2rem;
+}
+
+.hamburger-menu {
+  display: none; /* Hidden by default for larger screens */
+  cursor: pointer;
+  color: #000; /* Set icon color to black */
+  background-color: #fff; /* Set icon background to white */
+  padding: 10px; /* Optionally add padding for better visibility */
+  border-radius: 5px; /* Optionally add border-radius for rounded corners */
+  filter: invert(1); /* Invert colors */
+}
+
+/* Responsive Styles */
+
+.hero-image {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: block; /* Ensures no extra space below the image */
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust as needed */
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}.hero-content p {
+  width: 80%; /* Adjust the percentage as needed */
+  max-width: 1500px; /* Set a maximum width for readability */
+  margin: 0 auto; /* Centers the paragraph */
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-content h1,
+.hero-content p {
+  color: #f5f5f5;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0.5rem; /* Adjust as needed */
+}
+
+p {
+  max-width: 600px; /* Adjust for readability */
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+main {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1px;
+  flex: 1;
+}
+
+footer {
+  background-color: #141414;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  text-align: center;
+}
+
+#form {
+  width: 50rem;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #070707;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #2f3a46;
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+#contact {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  width: 50rem;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #333;
+}
+.image-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Adjust as needed */
+  overflow: hidden;
+  border-radius: 15px; /* Rounded corners */
+  margin-bottom: 1rem;
+}
+
+.image-gallery img {
+  width: 100%;
+  display: none; /* Hide all images initially */
+  border-radius: 15px; /* Apply border-radius to images */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-gallery img.active {
+  display: block; /* Show the active image */
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .nav-container .logo {
+    font-size: 1.2rem;
+    z-index: 2;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .nav--ul__one,
+  .nav--ul__two {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .hamburger-menu {
+    display: block;
+    z-index: 1000;
+  }
+
+  .nav {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    padding-top: 6rem;
+    align-items: center;
+    text-align: center;
+    background-color: #000; /* Set navigation background to black */
+    color: #fff; /* Set text color to white */
+    transition: 0.15s ease-in-out;
+    z-index: 1;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  #form {
+    padding: 15px;
+    z-index: 1;
+    width: 25rem;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px;
+    z-index: 1;
+  }
+
+  button[type="submit"] {
+    padding: 10px;
+  }
+
+  iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+  }
+
+  #contact {
+    padding: 15px;
+    width: 28rem;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p,
+  ul li {
+    font-size: 1em;
+  }
+
+  iframe {
+    height: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-card {
+    display: flex;
+    align-items: center;
+  }
+  .project-card h2,
+  .project-card p {
+    margin-left: 20px;
+  }
+}
+.nav-link a {
+  color: #cecece; /* Initial text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for color and shadow */
+  padding: 0.5rem 1rem; /* Add some padding for a better click area */
+  display: inline-block; /* Ensures padding is applied properly */
+}
+
+.nav-link a:hover,
+.nav-link a:focus {
+  text-shadow: 0 0 8px rgb(255, 255, 255); /* White glow effect */
+}
+
+.nav-link a:active {
+  text-shadow: 0 0 8px rgb(255, 255, 255); /* Stronger white glow effect on click */
+}
+
+/* New Section for Projects */
+main {
+  max-width: 1500px;
+  width: 1000;
+  margin: 0 auto;
+  padding: 1px;
+  flex: 1;
+}
+
+#projects {
+  padding: 20px;
+  flex-direction: column;
+}
+
+.project-card {
+  margin-bottom: 50px;
+  flex-direction: column;
+}
+.columnprojectcard {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.columnprojectcard > * {
+  flex: 1;
+  padding: 10px;
+}
+
+.project-card .image-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 90%;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.project-card .image-gallery img {
+  width: 100%;
+  display: none;
+  border-radius: 10px;
+  transition: opacity 2s ease-in-out;
+}
+
+.project-card .image-gallery img.active {
+  display: block;
+  opacity: 1;
+}
+
+.image-gallery button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.project-card .image-gallery .prev-btn {
+  left: 10px;
+}
+
+.project-card .image-gallery .next-btn {
+  right: 10px;
+}
+
+.project-card h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.project-card p {
+  text-align: center;
+  font-size: 1em;
+  color: #555;
+}
+/*about */
+#about {
+  text-align: center; /* Centers text within the section */
+  padding: 20px;
+  justify-content: end;
+}
+
+.profile-pic {
+  display: block;
+  margin: 0 auto; /* Centers the image */
+  border-radius: 10px;
+  max-width: 100%; /* Ensures responsiveness */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Ensure all child elements are centered */
+#about > * {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px; /* Optional: Set a max-width for better readability */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  
+  #about {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+  
+  #about > * {
+    max-width: 100%; /* Allow full width for better use of space */
+  }
+
+  li, p {
+    margin-top: 15px;
+  }
+  .columnprojectcard {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card p {
+    text-align: start;
+    font-size: 1em;
+    color: #555;
+  }
+}
